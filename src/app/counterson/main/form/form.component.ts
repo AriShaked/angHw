@@ -17,15 +17,15 @@ export class FormComponent implements OnInit {
   }
 
   bubbleToDaddy(){
-    this.putinVal.emit(this.putin);
-  }
-
-   buttonWakeUp(event){
-     if (event){
+  
+    if(this.putin){
       this.disabled = false;
       console.log("button is active");
-     }
-   }
-
+      this.putinVal.emit(this.putin);
+    }else{
+      this.disabled = true;
+    }
+      this.disabled = false;
+  }
 
 }
